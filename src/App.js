@@ -19,8 +19,12 @@ function App() {
     //</CartProvider>
     <CartProvider>
       <div className={classes.App}>
-        <Home />
-        <Cart />
+        {/* <Home />
+        <Cart /> */}
+         <Routes>
+           <Route path="/" element={<Home />} />
+           <Route path="/cart" element={<Cart />} />
+         </Routes>
       </div>
     </CartProvider>
     // </div>

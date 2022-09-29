@@ -1,3 +1,4 @@
+import Navbar from '../Template/Navbar'
 import { useCart } from 'react-use-cart';
 import Style from '../style'
 
@@ -10,11 +11,12 @@ const Cart = () => {
         removeItem,
     } = useCart();
 
-    if (isEmpty) return <p>Your cart is empty</p>;
-
+    
     const classes = Style();
     return (
         <>
+            <Navbar title='Home' link = '/'/>
+            {isEmpty ? <h1>Your cart is empty 🙄🙄</h1>:
             <div className={classes.wrapper} id= 'cart'>
                 <h1 className={classes.Head}>Cart ({totalUniqueItems})</h1>
 
@@ -31,7 +33,7 @@ const Cart = () => {
                         </li>
                     ))}
                 </ul>
-            </div>
+            </div>}
         </>
     );
 }

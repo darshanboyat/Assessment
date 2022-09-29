@@ -11,10 +11,9 @@ import Style from '../style'
 
 export default function ButtonAppBar(props) {
 const classes = Style();
-
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+      <AppBar className={classes.bar} position="static" component="nav">
         <Toolbar>
           <IconButton
             size="large"
@@ -29,7 +28,7 @@ const classes = Style();
           </Typography> 
           {props.Selectors && <><Selectors labels='filter'/><Selectors labels = 'Sort' label1 = 'rating' label2='discount' label3='price'/></>}
           <Button color="inherit">
-                <a href="#cart" className= {classes.link}>Cart</a>  
+                <a href={props.link} className= {classes.link}>{props.title}</a>  
           </Button>
         </Toolbar>
       </AppBar>

@@ -6,7 +6,7 @@ import Selector from './Template/Selector'
 function Home() {
   return (
     <>
-        <Navbar Selectors = {<Selector/>}/>
+        <Navbar Selectors = {<Selector/>} title='Cart' link='/cart'/>
         <ProductList/>
     </>
   )

@@ -1,6 +1,6 @@
 import {makeStyles} from '@material-ui/core'
 
-export default  makeStyles(() => ({
+export default makeStyles(() => ({
 
     html:{
         scrollBehavior: 'smooth'
@@ -10,13 +10,17 @@ export default  makeStyles(() => ({
         color: 'white',
         textAlign: 'center'
     },
+    bar:{
+        background: 'linear-gradient(to right, blue, red)',
+        boxShadow: '5px 0px 20px white',
+        position: 'sticky'
+    },
     heading: {
-        fontFamily: 'cursive'
+        fontFamily: 'cursive',
     },
     card:{
         margin: '30px',
-        height: '67vh',
-        boxShadow: '5px 10px 30px black'
+        height: '67vh'
     },
     container: {
         display: 'flex',
@@ -61,7 +65,6 @@ export default  makeStyles(() => ({
         borderBottom: '2px solid white'
     },
     wrapper:{
-        borderTop: '5px solid black',
         itemAlign: 'center',
         borderTop: '5px solid white',
     },
@@ -101,6 +104,20 @@ export default  makeStyles(() => ({
     },
     btns:{
         marginTop: '10%'
+    },
+    addCart: {
+        border: 'none',
+        padding: '5px 10px',
+        borderRadius: '2rem',
+        '&:hover':{
+            backgroundColor: 'blue',
+            color: 'white',
+            transform: 'scale(130%)',
+            transition: '.3s ease-in-out'
+        }
+    },
+    warn:{
+        color: 'red'
     }
 })
 

@@ -6,18 +6,15 @@ import { Container, Grid } from '@mui/material'
 
 function Products() {
     const [product, setProduct] = useState([])
+    const [sorting, setSorting] = useState('rating')
 
     React.useEffect(() => {
-        const fetchData = async () => {
-            const prod = await axios.get('https://dummyjson.com/products?limit=100')
-
+        const fetchData = async (sorting) => {
+            var prod = await axios.get('https://dummyjson.com/products?limit=100')
             setProduct([...prod.data.products])
         }
-        fetchData()
+        fetchData(sorting)
     }, [])
-
-
-    // }
     return (
         <>
                 <Container>
